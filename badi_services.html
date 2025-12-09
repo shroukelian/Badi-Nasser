@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا | مؤسسة بادي ناصر - مقاولات، إيبوكسي، ترميمات</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background-color: var(--nav-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            border-right: 4px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        /* بطاقة الإيبوكسي بتصميم مميز */
+        .service-card.epoxy-focus {
+            border-right: 6px solid var(--accent-color);
+            /* شريط ذهبي أعرض */
+            background-color: #435470;
+            /* لون أغمق قليلاً للبطاقة المميزة */
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--heading-color);
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 1em;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-container">
+
+            <div class="logo header-logo">
+                <a href="index.html">
+                    <img src="images/ChatGPT_Image_7_ديسمبر_2025__06_09_22_م-removebg-preview.png"
+                        alt="شعار مؤسسة بادي ناصر" style="height: 50px; width: auto;">
+                    <!-- **الإضافة هنا** -->
+                    <span>مؤسسة بادي ناصر للمقاولات</span>
+                </a>
+            </div>
+
+            <!-- 2. زر الهامبرغر -->
+            <button class="hamburger-menu" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- 3. القائمة الرئيسية -->
+            <div class="main-nav-wrapper">
+                <nav class="header-nav">
+                    <ul>
+                        <li class="active"><a href="index.html">الرئيسية</a></li>
+                        <li> <!-- تم التعديل هنا -->
+                            <a href="badi_services.html">خدماتنا</a>
+                            <ul class="submenu">
+                                <li><a href="badi_epoxy.html" style="color: var(--primary-color);">خدمات الإيبوكسي
+                                        (تخصصنا)</a></li>
+                                <li><a href="badi_services.html">باقي خدمات المقاولات</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="badi_projects.html">مشاريعنا</a></li>
+                        <li><a href="badi_about.html">من نحن</a></li>
+                        <li><a href="badi_contact.html">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+
+                <!-- أزرار الإجراءات -->
+                <div class="header-actions-group">
+                    <!-- <a href="en_index.html" class="lang-btn">English</a> -->
+                    <a href="badi_contact.html" class="consultation-btn">طلب استشارة مجانية</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="page-section" style="padding-top: 80px;">
+            <div class="container scroll-animate">
+                <h1 style="text-align: center; color: var(--primary-color);">خدماتنا الإنشائية المتخصصة</h1>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">نقدم مجموعة شاملة من خدمات
+                    المقاولات، مع تركيز خاص على حلول العوازل والإيبوكسي في المنطقة الغربية (جدة).</p>
+
+                <div class="service-grid">
+
+                    <!-- 1. التركيز: عوازل أرضيات وخزانات (إيبوكسي) -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.2s;">
+                        <img src="images/ارضيات ايبوكسى.jpeg" alt="صورة لأرضية إيبوكسي">
+                        <!-- <div class="service-content-wrapper"> -->
+                            <h3>1. عوازل أرضيات وخزانات (إيبوكسي) - **تخصصنا**</h3>
+                            <p>نحن خبراء في توريد وتطبيق مواد الإيبوكسي بأعلى معايير الجودة لحماية الخزانات من التسرب
+                                والأرضيات الصناعية والتجارية من التآكل والمواد الكيميائية. **نضمن لك جودة الإيبوكسي
+                                لسنوات.**</p>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- 2. مقاولات عامة -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.4s;">
+                        <img src="images/موقع بناء.jpg" alt="صورة لموقع بناء">
+                        <!-- <div class="service-content-wrapper"> -->
+                            <h3>2. المقاولات العامة</h3>
+                            <p>تغطية شاملة لأعمال البناء والتشييد، من الهياكل الخرسانية وإنشاء المباني السكنية والتجارية
+                                بضمان جودة في التنفيذ والالتزام التام بالمواصفات.</p>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- 3. إنشاء ملاحق -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.6s;">
+
+                        <img src="images/ملحق خارجى2.jpg" alt="صورة لملحق خارجي">
+                        <!-- <div class="service-content-wrapper"> -->
+
+                            <h3>3. إنشاء الملاحق العلوية والأرضية</h3>
+                            <p>تصميم وتنفيذ جميع أنواع الملاحق (غرف سائقين، مستودعات، مجالس، وحدات سكنية إضافية) بجودة
+                                عالية
+                                وأسعار منافسة.</p>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- 4. ترميمات -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.8s;">
+
+                        <img src="images/الترميمات.jpeg" alt="صورة لأعمال ترميم">
+                        <!-- <div class="service-content-wrapper"> -->
+
+                            <h3>4. الترميمات الشاملة</h3>
+                            <p>ترميم المباني القديمة، ومعالجة التشققات والعفن، وتجديد الواجهات والمنشآت المتضررة، لضمان
+                                عمر
+                                أطول لمبناك.</p>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- 5. دهانات -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.10s;">
+
+                        <img src="images/دهانات.jpeg" alt="صورة لدهانات داخلية">
+                        <!-- <div class="service-content-wrapper"> -->
+
+                            <h3>5. الدهانات الداخلية والخارجية</h3>
+                            <p>توريد وتنفيذ دهانات عالية الجودة لجميع الأسطح (جدران وأسقف) بتقنيات حديثة وألوان تدوم
+                                طويلاً.
+                            </p>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- 6. تخطيط طرق ومواقف -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.12s;">
+
+                        <img src="images/تخطيط الطرق.jpeg" alt="صورة لتخطيط طرق">
+                        <!-- <div class="service-content-wrapper"> -->
+
+                            <h3>6. تخطيط الطرق والمواقف</h3>
+                            <p>أعمال تخطيط ورسم خطوط الطرق ومواقف السيارات بالعلامات والدهانات المخصصة وفقاً لمعايير
+                                السلامة
+                                والجودة.</p>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- 7. مظلات وهناجر -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.14s;">
+
+                        <img src="images/هناجر.jpeg" alt="صورة لهنجر أو مظلة">
+                        <!-- <div class="service-content-wrapper"> -->
+
+                            <h3>7. المظلات والهناجر</h3>
+                            <p>تصميم وتركيب الهياكل المعدنية للمستودعات الكبيرة والمظلات للسيارات والأماكن العامة بضمان
+                                المتانة والأمان.</p>
+                        <!-- </div> -->
+                    </div>
+
+                    <!-- 8. ديكورات، جبسيات، وبلاط -->
+                    <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.16s;">
+
+                        <img src="images/ديكورات.jpeg" alt="صورة لديكورات داخلية">
+                        <!-- <div class="service-content-wrapper"> -->
+
+                            <h3>8. الديكورات، الجبسيات، والبلاط</h3>
+                            <p>تنفيذ جميع أعمال الجبس بورد والديكورات الداخلية وتركيب البلاط والسيراميك والرخام للأرضيات
+                                والجدران.</p>
+                        <!-- </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Floating Contact Buttons -->
+    <div class="fixed-contact-buttons">
+        <a href="https://wa.me/966538361605" target="_blank" class="floating-btn whatsapp-btn" aria-label="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:0538361605" class="floating-btn phone-btn" aria-label="اتصل بنا">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+    <footer class="main-footer" style="margin-top:70px ;">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- 1. نبذة عن المؤسسة -->
+                <div class="footer-col">
+                    <h3>مؤسسة بادي ناصر للمقاولات</h3>
+                    <p>شريكك الموثوق في المقاولات العامة، متخصصون في حلول الإيبوكسي المضمونة (أرضيات وخزانات)، الإنشاء،
+                        والترميم.</p>
+                    <!-- <div class="footer-social-links">
+                        <a href="https://wa.me/966538361605" target="_blank" aria-label="واتساب"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    </div> -->
+                </div>
+
+                <!-- 2. روابط سريعة -->
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="badi_services.html">خدماتنا (الإيبوكسي)</a></li>
+                        <li><a href="badi_projects.html">مشاريعنا</a></li>
+                        <li><a href="badi_about.html">من نحن</a></li>
+                        <li><a href="badi_contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. معلومات الاتصال والوثائق -->
+                <div class="footer-col footer-contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <p> المنطقة الغربية، المملكة العربية السعودية<i class="fas fa-map-marker-alt"></i></p>
+                    <p> 0538361605 <i class="fas fa-phone-alt"></i></p>
+                    <p> info@badi-nasser.com <i class="fas fa-envelope"></i></p>
+
+                    <h4 style="color: var(--primary-color); margin-top: 20px;">الوثائق الرسمية:</h4>
+                    <p style="font-size: 0.9em; margin-top: 5px;"> س.ت: 5900140814 <i class="fas fa-certificate"></i>
+                    </p>
+                    <p style="font-size: 0.9em;"> الرقم الضريبي: 311587640700003
+                        <i class="fas fa-file-invoice"></i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; <span id="current-year">2025</span> مؤسسة بادي ناصر مبارك بني هميم. جميع الحقوق محفوظة.
+                <p class="designer-note">Design and programming by<a
+                        href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                        target="_blank"><strong>GMTWEB</strong> </a> </p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

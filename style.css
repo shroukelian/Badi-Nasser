@@ -1,0 +1,1304 @@
+/* General & Typography (Badi Nasser Dark Theme) */
+:root {
+    /* **تعديل لون الـ Primary: إلى أصفر واضح** */
+    --primary-color: #FFC300;
+    /* Yellow/Gold (ألوان جديدة لعنوان الإيبوكسي) */
+    --accent-color: #D4AF37;
+    /* Gold/Bronze (اللون الثانوي) */
+    --bg-dark: #2A3649;
+    /* Dark Blue-Grey Base (الخلفية الأساسية) */
+    --text-light: #F0F0F0;
+    --heading-color: #D4AF37;
+    /* Headings in Gold/Bronze */
+    --nav-bg: #34435B;
+    /* Nav/Card Background (أغمق من الخلفية الأساسية) */
+}
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* --- Header Styling (Desktop Default) --- */
+header {
+    /* background-color: var(--nav-bg); */
+    background-color: transparent;
+    padding: 10px 0;
+    /* تم التعديل لتكبير اللوجو */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    /* لضمان ارتفاع مناسب للهيدر بعد إزالة النص */
+}
+
+/* Logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    /* **زيادة الـ gap بين اللوجو والنص** */
+    gap: 10px;
+    text-decoration: none;
+    height: 50px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.2));
+}
+
+.logo span {
+    /* **تفعيل وعرض النص** */
+    display: block;
+    font-size: 1.2em;
+    /* حجم مناسب */
+    font-weight: 700;
+    color: var(--text-light);
+    /* لون فاتح لبروز النص */
+    /* **إزالة الـ style="height: 50px; width: auto;" من HTML** */
+}
+
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+    /* ... (تنسيقات أخرى) ... */
+
+    .logo span {
+        display: none;
+        /* **إخفاء النص في الموبايل للحفاظ على المساحة** */
+        font-size: 1em;
+        /* تصغير الخط قليلاً للموبايل */
+    }
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-light);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* --- Main Navigation Wrapper (Desktop) --- */
+.main-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Nav Links */
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.header-nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.header-nav ul li a:hover,
+.header-nav ul li.active a {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-bottom: none;
+}
+
+/* Action Buttons Group */
+.header-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-btn {
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.consultation-btn {
+    background-color: var(--accent-color);
+    color: var(--bg-dark);
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* --- Hero Section --- */
+main {
+    padding-top: 80px;
+}
+
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 50px 0;
+    text-align: left;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: var(--bg-dark);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    color: var(--heading-color);
+    font-size: 3.5em;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.hero-content h1:nth-child(2) {
+    color: var(--primary-color);
+}
+
+/* اللون الأزرق */
+.hero-content p {
+    color: var(--text-light);
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+html[dir="rtl"] body {
+    text-align: right;
+    direction: rtl;
+}
+
+.rtl .hero-section .hero-content {
+    text-align: center;
+}
+
+/* تعديل محاذاة أزرار الـ Hero (للتوسيط بدلاً من اليمين) */
+.rtl .hero-content div {
+    display: flex;
+    /* **التعديل: توسيط الأزرار أفقيًا بدلاً من اليمين** */
+    justify-content: center;
+}
+
+/* --- Fixed Contact Buttons --- */
+.fixed-contact-buttons {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.floating-btn {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.6em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+}
+
+.phone-btn {
+    background-color: var(--primary-color);
+}
+
+/* --- Footer Styling --- */
+.main-footer {
+    background-color: var(--nav-bg);
+    color: var(--text-light);
+    padding: 50px 0 25px 0;
+    position: relative;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    /* ظل علوي خفيف */
+    text-align: left;
+    /* LTR Default */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-footer h3 {
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.main-footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-contact-info p {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-info p i {
+    color: var(--accent-color);
+    font-size: 1.2em;
+}
+
+.footer-social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.footer-social-links a {
+    font-size: 1.8em;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9em;
+    color: rgba(240, 240, 240, 0.7);
+    padding-top: 15px;
+}
+
+
+/* --- Contact Page Specific Styles (LTR Default) --- */
+.contact-grid-layout {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    margin-top: 50px;
+    align-items: flex-start;
+}
+
+.contact-info-section {
+    padding: 30px 0;
+    text-align: left;
+}
+
+.contact-info-section p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-info-section i {
+    color: var(--accent-color);
+    font-size: 1.1em;
+}
+
+.contact-form-container {
+    background-color: var(--nav-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form-container label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--heading-color);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: left;
+}
+
+.btn-send {
+    float: left;
+    background: linear-gradient(135deg, #7A5AF8, #5AF8A6);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.map-embed-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- RTL Support (Arabic) --- */
+html[dir="rtl"] body {
+    text-align: right;
+    direction: rtl;
+}
+
+.rtl .hero-content div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rtl .main-footer {
+    text-align: right;
+}
+
+.rtl .footer-contact-info p {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rtl .footer-contact-info p i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.rtl .footer-social-links {
+    justify-content: flex-end;
+}
+
+/* Contact RTL Fixes */
+.rtl .contact-grid-layout {
+    grid-template-columns: 1.5fr 1fr;
+    /* هذا الترتيب يضمن أن النموذج يأخذ مساحة أكبر ويكون على اليسار */
+    /* لاحظ أن العنصر الثاني (معلومات الاتصال) سيظهر أولاً بسبب خاصية order الافتراضية للغة العربية والـ Grid */
+}
+
+.rtl .contact-info-section {
+    text-align: right;
+}
+
+.rtl .contact-info-section p {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.rtl .contact-info-section p i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.rtl .contact-form-container label {
+    text-align: right;
+}
+
+.rtl .contact-form-container input,
+.rtl .contact-form-container textarea {
+    text-align: right;
+}
+
+.rtl .btn-send {
+    float: right;
+}
+
+/* Service RTL Fixes */
+.service-card {
+    background-color: var(--nav-bg);
+    padding: 0; /* **تم التعديل: إزالة البادينج من البطاقة نفسها** */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-right: 4px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+.service-card.epoxy-focus {
+    border-right: 6px solid var(--accent-color); 
+}
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block; /* لضمان عدم وجود مسافات بيضاء إضافية */
+    margin-bottom:0px;
+}
+.service-content-wrapper {
+    padding: 30px; /* **تمت الإضافة: تطبيق البادينج على المحتوى النصي فقط** */
+}
+.service-content-wrapper h3 {
+    color: var(--heading-color);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.service-content-wrapper p {
+    color: var(--text-light);
+    font-size: 1em;
+}
+
+/* --- Projects Page Card Styles (New) --- */
+.project-card {
+    background-color: var(--nav-bg);
+    padding: 0; /* **تم التعديل: إزالة البادينج من البطاقة نفسها** */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: right;
+    transition: transform 0.3s ease;
+}
+.project-card.epoxy-project {
+     border-top: 4px solid var(--accent-color); 
+}
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.project-content {
+    /* **تمت الإضافة: تطبيق البادينج على المحتوى النصي فقط** */
+    padding: 20px;
+}
+.project-content h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.project-content p {
+    color: var(--text-light);
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+
+    /* Hero Mobile Fixes (للتأكد من التوسيط الكامل) */
+    .hero-content {
+        text-align: center !important;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        text-align: center !important;
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        text-align: center !important;
+        font-size: 1em;
+    }
+
+    .hero-content div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    .hero-content div a {
+        margin: 0 !important;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    /* **NEW FIX for Page Titles on Mobile (خدماتنا/مشاريعنا/من نحن)** */
+    /* ضمان أن عناوين الصفحات والنص التمهيدي يملأون العرض */
+    .page-section h1,
+    .page-section p {
+        padding: 0 15px;
+        /* إضافة حشوة خفيفة من الجانبين لعدم ملامسة الحافة */
+    }
+
+    /* Header Mobile */
+    .hamburger-menu {
+        display: flex;
+        order: 2;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .main-nav-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 0;
+    }
+
+    .logo span {
+        display: block;
+        /* **تم التعديل: إظهار النص في الموبايل** */
+        font-size: 0.9em;
+        /* تصغير الخط قليلاً للموبايل للحفاظ على المساحة */
+    }
+
+    .main-nav-wrapper.active {
+        max-height: 500px;
+        padding-bottom: 20px;
+    }
+
+    .header-nav {
+        width: 100%;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav ul li a {
+        display: block;
+        padding: 15px;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .header-actions-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .header-actions-group a {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    /* Hero Mobile Fixes */
+    .hero-content {
+        text-align: center !important;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        text-align: center !important;
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        text-align: center !important;
+        font-size: 1em;
+    }
+
+    .hero-content div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    .hero-content div a {
+        margin: 0 !important;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    /* Contact Mobile Fixes */
+    .contact-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .contact-info-section,
+    .contact-form-container {
+        text-align: center;
+    }
+
+    .contact-info-section p {
+        justify-content: center;
+    }
+
+    .contact-form-container input,
+    .contact-form-container textarea {
+        text-align: left;
+    }
+
+    .btn-send {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    .map-embed-container iframe {
+        height: 300px;
+    }
+
+    /* RTL Contact Mobile Fixes */
+    .rtl .contact-form-container input,
+    .rtl .contact-form-container textarea {
+        text-align: right;
+    }
+
+    .rtl .contact-form-container label {
+        text-align: right;
+    }
+
+    .rtl .contact-info-section p {
+        flex-direction: row-reverse;
+    }
+
+    /* Footer Mobile Fixes */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social-links {
+        justify-content: center;
+    }
+
+    .footer-col ul {
+        padding: 0;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo a {
+        height: 45px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8em !important;
+    }
+
+    .hero-content div {
+        padding: 0 15px;
+    }
+
+    .hero-content div a {
+        width: 100%;
+    }
+
+    .fixed-contact-buttons {
+        left: 20px;
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .floating-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.4em;
+    }
+}
+
+/* تعريف حركة الظهور */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* الكلاس الذي سيتم تطبيقه على الأقسام أو البطاقات */
+.animate-on-load {
+    opacity: 0;
+    /* مخفي في البداية */
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    /* زمن الحركة */
+    animation-fill-mode: forwards;
+    /* للحفاظ على الشكل النهائي للحركة */
+    gap: 15px;
+    /* **ملاحظة:** تأخير الحركة سيتم إضافته كـ inline style في HTML */
+}
+
+/* الكلاس Hidden: لإخفاء العنصر قبل أن يراه المستخدم */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    /* إضافة تأثير بسيط للتمويه */
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+/* الكلاس Show: لإظهار العنصر وتشغيل الحركة */
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* --- Fix: Remove large space from particles-js on Contact Page --- */
+.small-particles-contact {
+    /* جعل الارتفاع صفراً أو صغيراً جداً */
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    /* إخفاءه من شاشة العرض */
+    display: none;
+}
+
+/* --- New About Page Styles --- */
+
+/* 1. Who We Are Section */
+.who-we-are-card {
+    background-color: var(--nav-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-right: 6px solid var(--primary-color);
+    /* شريط رئيسي */
+    margin-bottom: 50px;
+}
+
+.who-we-are-card h2 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2em;
+    padding-right: 15px;
+    border-right: 4px solid var(--accent-color);
+}
+
+/* 2. Vision & Mission Grid */
+.vm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.vm-card {
+    background-color: var(--nav-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.vm-card i {
+    font-size: 3em;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.vision-card i {
+    color: var(--accent-color);
+}
+
+/* ذهبي/برونزي */
+.mission-card i {
+    color: var(--primary-color);
+}
+
+/* أصفر */
+
+.vm-card h3 {
+    color: var(--heading-color);
+    font-size: 1.6em;
+}
+
+/* 3. Core Values Grid */
+.core-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.value-card {
+    background-color: var(--nav-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid var(--accent-color);
+    transition: background-color 0.3s ease;
+}
+
+.value-card:hover {
+    background-color: var(--bg-dark);
+    /* تغيير خفيف في الخلفية عند التمرير */
+    border-top: 3px solid var(--primary-color);
+}
+
+.value-card i {
+    font-size: 2em;
+    color: var(--primary-color);
+    /* أصفر */
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.value-card h3 {
+    color: var(--heading-color);
+    font-size: 1.3em;
+    margin: 0;
+}
+
+
+/* --- RTL Adjustments for New Styles --- */
+.rtl .who-we-are-card {
+    border-right: none;
+    border-left: 6px solid var(--primary-color);
+    /* عكس الشريط */
+}
+
+.rtl .who-we-are-card h2 {
+    padding-right: 0;
+    padding-left: 15px;
+    border-right: none;
+    border-left: 4px solid var(--accent-color);
+    /* عكس الشريط */
+}
+
+/*
+======================================
+  NEW: Styles for Automatic Card Slider 
+======================================
+*/
+
+/* تعريف حركة السلايدر لـ 3 صور (كل صورة تأخذ 33.33% من العرض) */
+@keyframes slide-continuous {
+    /* الصورة الأولى */
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); } 
+
+    /* الانتقال للصورة الثانية */
+    30% { transform: translateX(-100%); }
+
+    /* الصورة الثانية */
+    55% { transform: translateX(-100%); } 
+
+    /* الانتقال للصورة الثالثة */
+    60% { transform: translateX(-200%); } 
+
+    /* الصورة الثالثة */
+    85% { transform: translateX(-200%); } 
+
+    /* الانتقال الأخير للصورة الأولى */
+    90% { transform: translateX(0); } 
+    100% { transform: translateX(0); } /* تأكيد النهاية */
+}
+
+/* المسار الذي يحوي كل الصور */
+.slide-track {
+    width: 300%; 
+    height: 100%;
+    display: flex;
+    /* تشغيل الحركة */
+    animation: slide-continuous 9s infinite; /* تقليل الزمن إلى 9 ثواني */
+    transition: transform 0.5s ease-in-out; /* إضافة انتقال إضافي لبعض المتصفحات */
+}
+
+/* حاوية السلايدر (لتحديد العرض وإخفاء الصور الزائدة) */
+.slider-container {
+    width: 100%;
+    /* استخدام الارتفاع المحدد للصورة */
+    height: 200px; 
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+/* المسار الذي يحوي كل الصور */
+
+/* كل شريحة (صورة) */
+.slide {
+    /* **التعديل هنا حسب عدد الصور (3 صور = 33.33%)** */
+    width: 33.33%;
+    height: 100%;
+    flex-shrink: 0; /* لمنع تقلص الشرائح */
+}
+
+.slide img {
+    /* الصورة تملأ الشريحة بالكامل */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* تعديل ارتفاع الصورة في بطاقات المشاريع لتناسب ارتفاع السلايدر */
+.project-card .slider-container {
+    height: 220px; /* استخدام ارتفاع صورة المشاريع */
+}
+
+/* ... (في منطقة تنسيقات الـ Nav) ... */
+
+/* تنسيق القائمة الفرعية (Submenu) - للحاسوب فقط */
+.header-nav ul li {
+    position: relative; /* لتكون نقطة مرجعية للقائمة الفرعية */
+}
+.header-nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* تظهر أسفل الرابط الأساسي */
+    right: 0;
+    min-width: 250px;
+    background-color: var(--nav-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    padding: 10px 0;
+    z-index: 1050;
+    list-style: none;
+}
+.header-nav ul li:hover > .submenu {
+    display: block; /* تظهر القائمة عند التمرير بالماوس */
+}
+.header-nav ul li .submenu li {
+    padding: 0;
+    border-bottom: none; /* إزالة الخطوط الداخلية */
+}
+.header-nav ul li .submenu li a {
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap; /* لمنع كسر النص */
+    font-weight: 500;
+    color: var(--text-light) !important;
+}
+.header-nav ul li .submenu li a:hover {
+    background-color: var(--bg-dark); /* لون خلفية عند التمرير */
+}
+
+/* تعديلات القائمة على الموبايل (@media query) */
+@media (max-width: 992px) {
+    /* ... (كود قائمة الهامبرغر الحالي) ... */
+    
+    /* جعل العناصر الفرعية تظهر في القائمة المنسدلة على الموبايل */
+    .header-nav ul li .submenu {
+        display: block; /* عرض القائمة الفرعية بشكل طبيعي على الموبايل */
+        position: static;
+        min-width: auto;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+    }
+    .header-nav ul li .submenu li a {
+        padding-right: 30px; /* لعمل إزاحة بسيطة للأمام */
+        color: var(--text-light);
+        background-color: var(--nav-bg); /* تأكيد خلفية العنصر الفرعي */
+    }
+    .header-nav ul li .submenu li a:hover {
+        background-color: var(--bg-dark);
+    }
+    /* إخفاء القائمة الفرعية من السلوك الافتراضي للهامبرغر */
+    .header-nav ul li:hover > .submenu {
+        display: block; 
+    }
+    /* إزالة الخط السفلي من رابط "خدماتنا" الرئيسي عندما تكون القائمة الفرعية تحته */
+    .header-nav ul li:has(.submenu) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* إعادة إضافة الخط السفلي هنا */
+    }
+}
+/* ... (في نهاية ملف style.css أو في قسم الأنماط الجديدة) ... */
+
+/* 1. تعريف الحركة: نص يتحرك من اليمين لليسار باستمرار (Marquee Classic) */
+@keyframes marquee-classic {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* يتحرك إلى اليسار بعرض النص نفسه (100%) */
+}
+
+/* 2. تنسيق شريط الضمان وحاوية الحركة */
+.guarantee-banner {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    padding: 15px 0; /* تم تقليل البادينج الأفقي */
+    text-align: center;
+    font-weight: 700;
+    margin-top: 60px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    /* إضافة التنسيقات اللازمة للحركة */
+    overflow: hidden; 
+    white-space: nowrap; 
+    position: relative; 
+    box-sizing: border-box; /* للتأكد أن البادينج لا يوسع الشريط */
+}
+
+/* 3. تنسيق النص المتحرك داخل الشريط */
+.guarantee-banner .text-scroll {
+    /* **التعديل هنا لتمكين حركة الـ Marquee الكلاسيكية** */
+    display: inline-block;
+    /* تكرار النص مرتين لضمان حلقة سلسة */
+    width: auto; 
+    /* تشغيل الحركة */
+    animation: marquee-classic 15s linear infinite; /* 15 ثانية، سرعة ثابتة، تكرار لانهائي */
+}
+
+/* 4. تعديل الأيقونة داخل الشريط */
+.guarantee-banner i {
+    color: var(--bg-dark); /* لون الأيقونة */
+    margin: 0 10px;
+}
+
+/* **تعديل خاص بـ RTL** */
+/* لتطبيق حركة الـ Marquee الكلاسيكية في اتجاه الـ RTL */
+.rtl .guarantee-banner .text-scroll {
+    animation: marquee-classic 15s linear infinite; /* تبقى نفس الحركة لأنها تتحكم في الـ X */
+}
+/* ====================================== */
+/*          Index Page Sections           */
+/* ====================================== */
+
+/* 1. Core Services Pillars */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+.pillar-card {
+    background-color: var(--nav-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 4px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+.pillar-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 4px solid var(--primary-color);
+}
+.pillar-card i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.pillar-card h3 {
+    color: var(--heading-color);
+    font-weight: 700;
+}
+.pillar-card p {
+    font-size: 0.95em;
+    color: var(--text-light);
+}
+
+/* 2. Epoxy Advantage Section */
+.epoxy-advantage {
+    background-color: var(--nav-bg);
+    padding: 60px 40px;
+    border-radius: 15px;
+    margin: 80px auto;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+}
+.epoxy-advantage h2 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+}
+.epoxy-features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+.epoxy-feature {
+    color: var(--text-light);
+    font-size: 1.1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.epoxy-feature i {
+    color: var(--accent-color);
+    font-size: 1.5em;
+}
+
+/* 3. Featured Projects (Re-using Project Card style) */
+.featured-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.project-card-small img {
+    height: 180px;
+}
+
+/* 4. Core Values (Re-using About Page styles for consistency) */
+/* No need for new CSS if 'core-values-grid' is already defined in style.css */
+
+
+/* MOBILE RESPONSIVE Adjustments for New Sections */
+@media (max-width: 768px) {
+    .epoxy-advantage {
+        padding: 40px 20px;
+        margin: 50px auto;
+    }
+    .epoxy-advantage h2 {
+        font-size: 1.8em;
+    }
+    .epoxy-features-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pillars-grid, .featured-projects-grid {
+        padding: 0 15px;
+    }
+}
+.hidden-scroll { /* **تم التعديل** */
+    opacity: 0;
+    filter: blur(5px);
+    /* إضافة تأثير بسيط للتمويه */
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+/* الكلاس Show: لإظهار العنصر وتشغيل الحركة */
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}

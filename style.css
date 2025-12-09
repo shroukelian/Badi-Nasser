@@ -1302,3 +1302,88 @@ html[dir="rtl"] body {
     filter: blur(0);
     transform: translateY(0);
 }
+
+/* ====================================== */
+/*             Image Lightbox Styles      */
+/* ====================================== */
+
+/* 1. الخلفية الداكنة الكاملة */
+.image-modal {
+    display: none; /* إخفاء في البداية */
+    position: fixed;
+    z-index: 2000; /* أعلى من كل شيء */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* خلفية سوداء شفافة */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* تأثير ضبابي خفيف */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.image-modal.active {
+    display: flex; /* إظهار عند التفعيل */
+}
+
+/* 2. حاوية الصورة داخل المعرض */
+.modal-content-wrapper {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoom-in 0.3s ease-out; /* حركة فتح سريعة */
+}
+
+/* 3. الصورة نفسها */
+.modal-content {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    object-fit: contain; /* لضمان ظهور الصورة بالكامل دون قص */
+}
+
+/* 4. زر الإغلاق (X) */
+.close-modal {
+    position: absolute;
+    top: -30px; /* تظهر أعلى الحاوية */
+    right: -30px;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--bg-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* حركة الفتح */
+@keyframes zoom-in {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* RTL Fixes for Close Button */
+.rtl .close-modal {
+    left: -30px;
+    right: auto;
+}

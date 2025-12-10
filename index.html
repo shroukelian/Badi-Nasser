@@ -35,17 +35,32 @@
 
             <!-- 3. القائمة الرئيسية -->
             <div class="main-nav-wrapper">
-                <nav class="header-nav">
+           <nav class="header-nav">
                     <ul>
-                        <li class="active"><a href="index.html">الرئيسية</a></li>
-                        <li> <!-- تم التعديل هنا -->
-                            <a href="badi_services.html">خدماتنا</a>
+                        <li class="active"><a href="index.html">الرئيسية</a></li> 
+                        
+                        <!-- **قائمة الخدمات الفرعية (Dropdown)** -->
+                        <li class="services-dropdown"> <!-- إضافة كلاس لتحديد الـ Dropdown -->
+                            <a href="badi_services.html">خدماتنا </a>
                             <ul class="submenu">
-                                <li><a href="badi_epoxy.html" style="color: var(--primary-color);">خدمات الإيبوكسي
-                                        (تخصصنا)</a></li>
-                                <li><a href="badi_services.html">باقي خدمات المقاولات</a></li>
+                                <!-- 1. الإيبوكسي (الأهم) -->
+                                <li><a href="badi_epoxy.html" style="color: var(--primary-color); font-weight: 700;">الإيبوكسي (تخصصنا)</a></li>
+                                <li class="divider"><hr></li> <!-- فاصل بصري -->
+                                
+                                <!-- 2. باقي الخدمات المضافة -->
+                                <li><a href="badi_مقاولات.html">المقاولات العامة</a></li>
+                                <li><a href="badi_ترميمات.html">الترميمات الشاملة</a></li>
+                                <!-- <li><a href="badi_ملاحق.html">إنشاء الملاحق</a></li> -->
+                                <li><a href="badi_مظلات_هناجر.html">المظلات والهناجر</a></li>
+                                <li><a href="badi_تخطيط_طرق.html">تخطيط الطرق</a></li>
+                                <li><a href="badi_ديكورات.html"> الديكورات</a></li>
+                                
+                                <li class="divider"><hr></li> <!-- فاصل بصري -->
+                                <li><a href="badi_services.html">عرض جميع الخدمات</a></li>
                             </ul>
                         </li>
+                        
+                        <!-- **الروابط الثابتة الأخرى** -->
                         <li><a href="badi_projects.html">مشاريعنا</a></li>
                         <li><a href="badi_about.html">من نحن</a></li>
                         <li><a href="badi_contact.html">اتصل بنا</a></li>

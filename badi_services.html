@@ -69,11 +69,11 @@
 
 <body>
 
-    <header>
+     <header>
         <div class="container header-container">
 
             <div class="logo header-logo">
-                <a href="index.html">
+                <a href="badi_home.html">
                     <img src="images/ChatGPT_Image_7_ديسمبر_2025__06_09_22_م-removebg-preview.png"
                         alt="شعار مؤسسة بادي ناصر" style="height: 50px; width: auto;">
                     <!-- **الإضافة هنا** -->
@@ -90,17 +90,32 @@
 
             <!-- 3. القائمة الرئيسية -->
             <div class="main-nav-wrapper">
-                <nav class="header-nav">
+           <nav class="header-nav">
                     <ul>
-                        <li class="active"><a href="index.html">الرئيسية</a></li>
-                        <li> <!-- تم التعديل هنا -->
-                            <a href="badi_services.html">خدماتنا</a>
+                        <li ><a href="index.html">الرئيسية</a></li> 
+                        
+                        <!-- **قائمة الخدمات الفرعية (Dropdown)** -->
+                        <li class="services-dropdown"> <!-- إضافة كلاس لتحديد الـ Dropdown -->
+                            <a href="badi_services.html">خدماتنا </a>
                             <ul class="submenu">
-                                <li><a href="badi_epoxy.html" style="color: var(--primary-color);">خدمات الإيبوكسي
-                                        (تخصصنا)</a></li>
-                                <li><a href="badi_services.html">باقي خدمات المقاولات</a></li>
+                                <!-- 1. الإيبوكسي (الأهم) -->
+                                <li><a href="badi_epoxy.html" style="color: var(--primary-color); font-weight: 700;">الإيبوكسي (تخصصنا)</a></li>
+                                <li class="divider"><hr></li> <!-- فاصل بصري -->
+                                
+                                <!-- 2. باقي الخدمات المضافة -->
+                                <li><a href="badi_مقاولات.html">المقاولات العامة</a></li>
+                                <li><a href="badi_ترميمات.html">الترميمات الشاملة</a></li>
+                                <!-- <li><a href="badi_ملاحق.html">إنشاء الملاحق</a></li> -->
+                                <li><a href="badi_مظلات_هناجر.html">المظلات والهناجر</a></li>
+                                <li ><a href="badi_تخطيط_طرق.html">تخطيط الطرق</a></li>
+                                <li><a href="badi_ديكورات.html"> الديكورات</a></li>
+                                
+                                <li class="divider"><hr></li> <!-- فاصل بصري -->
+                                <li><a href="badi_services.html">عرض جميع الخدمات</a></li>
                             </ul>
                         </li>
+                        
+                        <!-- **الروابط الثابتة الأخرى** -->
                         <li><a href="badi_projects.html">مشاريعنا</a></li>
                         <li><a href="badi_about.html">من نحن</a></li>
                         <li><a href="badi_contact.html">اتصل بنا</a></li>
@@ -109,14 +124,14 @@
 
                 <!-- أزرار الإجراءات -->
                 <div class="header-actions-group">
-                    <!-- <a href="en_index.html" class="lang-btn">English</a> -->
+                    <!-- <a href="en_badi_home.html" class="lang-btn">English</a> -->
                     <a href="badi_contact.html" class="consultation-btn">طلب استشارة مجانية</a>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="page-section" style="padding-top: 80px;">
+        <section class="page-section" style="padding-top: 60px;">
             <div class="container scroll-animate">
                 <h1 style="text-align: center; color: var(--primary-color);">خدماتنا الإنشائية المتخصصة</h1>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">نقدم مجموعة شاملة من خدمات
@@ -212,7 +227,7 @@
                     <!-- 8. ديكورات، جبسيات، وبلاط -->
                     <div class="service-card epoxy-focus animate-on-load" style="animation-delay: 0.16s;">
 
-                        <img src="images/ديكورات.jpeg" alt="صورة لديكورات داخلية">
+                        <img src="images/ديكور 1.jpeg" alt="صورة لديكورات داخلية">
                         <!-- <div class="service-content-wrapper"> -->
 
                             <h3>8. الديكورات، الجبسيات، والبلاط</h3>

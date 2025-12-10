@@ -4,14 +4,14 @@ particlesJS('particles-js', {
             "value": 120, 
             "density": {"enable": true, "value_area": 1000}
         },
-        "color": {"value": "#D4AF37"}, /* لون النقاط (الذهبي/أكسنت) */
+        "color": {"value": "#D4AF37"}, 
         "shape": {"type": "circle"},
         "opacity": {"value": 0.6, "random": false, "anim": {"enable": false}},
         "size": {"value": 4, "random": true, "anim": {"enable": false}},
         "line_linked": {
             "enable": true,
             "distance": 150,
-            "color": "#1D3557", /* لون الخطوط (الأزرق الداكن/الرئيسي) */
+            "color": "#1D3557", 
             "opacity": 0.5,
             "width": 1.5 
         },

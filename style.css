@@ -246,10 +246,8 @@ html[dir="rtl"] body {
     text-align: center;
 }
 
-/* تعديل محاذاة أزرار الـ Hero (للتوسيط بدلاً من اليمين) */
 .rtl .hero-content div {
     display: flex;
-    /* **التعديل: توسيط الأزرار أفقيًا بدلاً من اليمين** */
     justify-content: center;
 }
 
@@ -298,7 +296,6 @@ html[dir="rtl"] body {
     padding: 50px 0 25px 0;
     position: relative;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-    /* ظل علوي خفيف */
     text-align: left;
     /* LTR Default */
 }
@@ -477,8 +474,6 @@ html[dir="rtl"] body {
 /* Contact RTL Fixes */
 .rtl .contact-grid-layout {
     grid-template-columns: 1.5fr 1fr;
-    /* هذا الترتيب يضمن أن النموذج يأخذ مساحة أكبر ويكون على اليسار */
-    /* لاحظ أن العنصر الثاني (معلومات الاتصال) سيظهر أولاً بسبب خاصية order الافتراضية للغة العربية والـ Grid */
 }
 
 .rtl .contact-info-section {
@@ -512,7 +507,7 @@ html[dir="rtl"] body {
 /* Service RTL Fixes */
 .service-card {
     background-color: var(--nav-bg);
-    padding: 0; /* **تم التعديل: إزالة البادينج من البطاقة نفسها** */
+    padding: 0;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -526,11 +521,11 @@ html[dir="rtl"] body {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    display: block; /* لضمان عدم وجود مسافات بيضاء إضافية */
+    display: block;
     margin-bottom:0px;
 }
 .service-content-wrapper {
-    padding: 30px; /* **تمت الإضافة: تطبيق البادينج على المحتوى النصي فقط** */
+    padding: 30px; 
 }
 .service-content-wrapper h3 {
     color: var(--heading-color);
@@ -544,10 +539,10 @@ html[dir="rtl"] body {
     font-size: 1em;
 }
 
-/* --- Projects Page Card Styles (New) --- */
+
 .project-card {
     background-color: var(--nav-bg);
-    padding: 0; /* **تم التعديل: إزالة البادينج من البطاقة نفسها** */
+    padding: 0; 
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -564,7 +559,6 @@ html[dir="rtl"] body {
     display: block;
 }
 .project-content {
-    /* **تمت الإضافة: تطبيق البادينج على المحتوى النصي فقط** */
     padding: 20px;
 }
 .project-content h3 {
@@ -582,7 +576,6 @@ html[dir="rtl"] body {
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 992px) {
 
-    /* Hero Mobile Fixes (للتأكد من التوسيط الكامل) */
     .hero-content {
         text-align: center !important;
         margin: 0 auto;
@@ -616,12 +609,10 @@ html[dir="rtl"] body {
         display: block;
     }
 
-    /* **NEW FIX for Page Titles on Mobile (خدماتنا/مشاريعنا/من نحن)** */
-    /* ضمان أن عناوين الصفحات والنص التمهيدي يملأون العرض */
+
     .page-section h1,
     .page-section p {
         padding: 0 15px;
-        /* إضافة حشوة خفيفة من الجانبين لعدم ملامسة الحافة */
     }
 
     /* Header Mobile */
@@ -652,9 +643,7 @@ html[dir="rtl"] body {
 
     .logo span {
         display: block;
-        /* **تم التعديل: إظهار النص في الموبايل** */
         font-size: 0.9em;
-        /* تصغير الخط قليلاً للموبايل للحفاظ على المساحة */
     }
 
     .main-nav-wrapper.active {
@@ -828,7 +817,6 @@ html[dir="rtl"] body {
     }
 }
 
-/* تعريف حركة الظهور */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -841,29 +829,21 @@ html[dir="rtl"] body {
     }
 }
 
-/* الكلاس الذي سيتم تطبيقه على الأقسام أو البطاقات */
 .animate-on-load {
     opacity: 0;
-    /* مخفي في البداية */
     animation-name: fadeInUp;
     animation-duration: 0.8s;
-    /* زمن الحركة */
     animation-fill-mode: forwards;
-    /* للحفاظ على الشكل النهائي للحركة */
     gap: 15px;
-    /* **ملاحظة:** تأخير الحركة سيتم إضافته كـ inline style في HTML */
 }
 
-/* الكلاس Hidden: لإخفاء العنصر قبل أن يراه المستخدم */
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    /* إضافة تأثير بسيط للتمويه */
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
 }
 
-/* الكلاس Show: لإظهار العنصر وتشغيل الحركة */
 .show {
     opacity: 1;
     filter: blur(0);
@@ -872,11 +852,9 @@ html[dir="rtl"] body {
 
 /* --- Fix: Remove large space from particles-js on Contact Page --- */
 .small-particles-contact {
-    /* جعل الارتفاع صفراً أو صغيراً جداً */
     height: 0 !important;
     min-height: 0 !important;
     padding: 0 !important;
-    /* إخفاءه من شاشة العرض */
     display: none;
 }
 
@@ -889,7 +867,6 @@ html[dir="rtl"] body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     border-right: 6px solid var(--primary-color);
-    /* شريط رئيسي */
     margin-bottom: 50px;
 }
 
@@ -934,12 +911,10 @@ html[dir="rtl"] body {
     color: var(--accent-color);
 }
 
-/* ذهبي/برونزي */
 .mission-card i {
     color: var(--primary-color);
 }
 
-/* أصفر */
 
 .vm-card h3 {
     color: var(--heading-color);
@@ -966,14 +941,12 @@ html[dir="rtl"] body {
 
 .value-card:hover {
     background-color: var(--bg-dark);
-    /* تغيير خفيف في الخلفية عند التمرير */
     border-top: 3px solid var(--primary-color);
 }
 
 .value-card i {
     font-size: 2em;
     color: var(--primary-color);
-    /* أصفر */
     margin-bottom: 10px;
     display: block;
     margin: 0 auto 10px auto;
@@ -990,7 +963,6 @@ html[dir="rtl"] body {
 .rtl .who-we-are-card {
     border-right: none;
     border-left: 6px solid var(--primary-color);
-    /* عكس الشريط */
 }
 
 .rtl .who-we-are-card h2 {
@@ -998,7 +970,6 @@ html[dir="rtl"] body {
     padding-left: 15px;
     border-right: none;
     border-left: 4px solid var(--accent-color);
-    /* عكس الشريط */
 }
 
 /*
@@ -1007,60 +978,46 @@ html[dir="rtl"] body {
 ======================================
 */
 
-/* تعريف حركة السلايدر لـ 3 صور (كل صورة تأخذ 33.33% من العرض) */
 @keyframes slide-continuous {
-    /* الصورة الأولى */
     0% { transform: translateX(0); }
     25% { transform: translateX(0); } 
 
-    /* الانتقال للصورة الثانية */
     30% { transform: translateX(-100%); }
 
-    /* الصورة الثانية */
     55% { transform: translateX(-100%); } 
 
-    /* الانتقال للصورة الثالثة */
     60% { transform: translateX(-200%); } 
 
-    /* الصورة الثالثة */
     85% { transform: translateX(-200%); } 
 
-    /* الانتقال الأخير للصورة الأولى */
     90% { transform: translateX(0); } 
-    100% { transform: translateX(0); } /* تأكيد النهاية */
+    100% { transform: translateX(0); }
 }
 
-/* المسار الذي يحوي كل الصور */
 .slide-track {
     width: 300%; 
     height: 100%;
     display: flex;
-    /* تشغيل الحركة */
-    animation: slide-continuous 9s infinite; /* تقليل الزمن إلى 9 ثواني */
-    transition: transform 0.5s ease-in-out; /* إضافة انتقال إضافي لبعض المتصفحات */
+    animation: slide-continuous 9s infinite; 
+    transition: transform 0.5s ease-in-out; 
 }
 
-/* حاوية السلايدر (لتحديد العرض وإخفاء الصور الزائدة) */
 .slider-container {
     width: 100%;
-    /* استخدام الارتفاع المحدد للصورة */
     height: 200px; 
     overflow: hidden;
     margin-bottom: 0;
 }
 
-/* المسار الذي يحوي كل الصور */
 
-/* كل شريحة (صورة) */
 .slide {
-    /* **التعديل هنا حسب عدد الصور (3 صور = 33.33%)** */
+   
     width: 33.33%;
     height: 100%;
-    flex-shrink: 0; /* لمنع تقلص الشرائح */
+    flex-shrink: 0; 
 }
 
 .slide img {
-    /* الصورة تملأ الشريحة بالكامل */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1069,21 +1026,18 @@ html[dir="rtl"] body {
 
 
 
-/* تعديل ارتفاع الصورة في بطاقات المشاريع لتناسب ارتفاع السلايدر */
 .project-card .slider-container {
-    height: 220px; /* استخدام ارتفاع صورة المشاريع */
+    height: 220px;
 }
 
-/* ... (في منطقة تنسيقات الـ Nav) ... */
 
-/* تنسيق القائمة الفرعية (Submenu) - للحاسوب فقط */
 .header-nav ul li {
-    position: relative; /* لتكون نقطة مرجعية للقائمة الفرعية */
+    position: relative;
 }
 .header-nav ul li .submenu {
     display: none;
     position: absolute;
-    top: 100%; /* تظهر أسفل الرابط الأساسي */
+    top: 100%;
     right: 0;
     min-width: 250px;
     background-color: var(--nav-bg);
@@ -1094,30 +1048,26 @@ html[dir="rtl"] body {
     list-style: none;
 }
 .header-nav ul li:hover > .submenu {
-    display: block; /* تظهر القائمة عند التمرير بالماوس */
+    display: block;
 }
 .header-nav ul li .submenu li {
     padding: 0;
-    border-bottom: none; /* إزالة الخطوط الداخلية */
+    border-bottom: none;
 }
 .header-nav ul li .submenu li a {
     padding: 10px 15px;
     display: block;
-    white-space: nowrap; /* لمنع كسر النص */
+    white-space: nowrap;
     font-weight: 500;
     color: var(--text-light) !important;
 }
 .header-nav ul li .submenu li a:hover {
-    background-color: var(--bg-dark); /* لون خلفية عند التمرير */
+    background-color: var(--bg-dark);
 }
 
-/* تعديلات القائمة على الموبايل (@media query) */
 @media (max-width: 992px) {
-    /* ... (كود قائمة الهامبرغر الحالي) ... */
-    
-    /* جعل العناصر الفرعية تظهر في القائمة المنسدلة على الموبايل */
     .header-nav ul li .submenu {
-        display: block; /* عرض القائمة الفرعية بشكل طبيعي على الموبايل */
+        display: block;
         position: static;
         min-width: auto;
         box-shadow: none;
@@ -1125,67 +1075,54 @@ html[dir="rtl"] body {
         padding: 0;
     }
     .header-nav ul li .submenu li a {
-        padding-right: 30px; /* لعمل إزاحة بسيطة للأمام */
+        padding-right: 30px; 
         color: var(--text-light);
-        background-color: var(--nav-bg); /* تأكيد خلفية العنصر الفرعي */
+        background-color: var(--nav-bg); 
     }
     .header-nav ul li .submenu li a:hover {
         background-color: var(--bg-dark);
     }
-    /* إخفاء القائمة الفرعية من السلوك الافتراضي للهامبرغر */
     .header-nav ul li:hover > .submenu {
         display: block; 
     }
-    /* إزالة الخط السفلي من رابط "خدماتنا" الرئيسي عندما تكون القائمة الفرعية تحته */
     .header-nav ul li:has(.submenu) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* إعادة إضافة الخط السفلي هنا */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
     }
 }
-/* ... (في نهاية ملف style.css أو في قسم الأنماط الجديدة) ... */
-
-/* 1. تعريف الحركة: نص يتحرك من اليمين لليسار باستمرار (Marquee Classic) */
 @keyframes marquee-classic {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); } /* يتحرك إلى اليسار بعرض النص نفسه (100%) */
+    100% { transform: translateX(-100%); } 
 }
 
-/* 2. تنسيق شريط الضمان وحاوية الحركة */
 .guarantee-banner {
     background-color: var(--primary-color);
     color: var(--bg-dark);
-    padding: 15px 0; /* تم تقليل البادينج الأفقي */
+    padding: 15px 0; 
     text-align: center;
     font-weight: 700;
     margin-top: 60px;
     border-radius: 10px;
     font-size: 1.2em;
-    /* إضافة التنسيقات اللازمة للحركة */
     overflow: hidden; 
     white-space: nowrap; 
     position: relative; 
-    box-sizing: border-box; /* للتأكد أن البادينج لا يوسع الشريط */
+    box-sizing: border-box; 
 }
 
-/* 3. تنسيق النص المتحرك داخل الشريط */
 .guarantee-banner .text-scroll {
-    /* **التعديل هنا لتمكين حركة الـ Marquee الكلاسيكية** */
     display: inline-block;
-    /* تكرار النص مرتين لضمان حلقة سلسة */
     width: auto; 
-    /* تشغيل الحركة */
-    animation: marquee-classic 15s linear infinite; /* 15 ثانية، سرعة ثابتة، تكرار لانهائي */
+    animation: marquee-classic 15s linear infinite; 
 }
 
-/* 4. تعديل الأيقونة داخل الشريط */
 .guarantee-banner i {
-    color: var(--bg-dark); /* لون الأيقونة */
+    color: var(--bg-dark);
     margin: 0 10px;
 }
 
-/* **تعديل خاص بـ RTL** */
-/* لتطبيق حركة الـ Marquee الكلاسيكية في اتجاه الـ RTL */
+
 .rtl .guarantee-banner .text-scroll {
-    animation: marquee-classic 15s linear infinite; /* تبقى نفس الحركة لأنها تتحكم في الـ X */
+    animation: marquee-classic 15s linear infinite;
 }
 /* ====================================== */
 /*          Index Page Sections           */
@@ -1289,15 +1226,13 @@ html[dir="rtl"] body {
         padding: 0 15px;
     }
 }
-.hidden-scroll { /* **تم التعديل** */
+.hidden-scroll { 
     opacity: 0;
     filter: blur(5px);
-    /* إضافة تأثير بسيط للتمويه */
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
 }
 
-/* الكلاس Show: لإظهار العنصر وتشغيل الحركة */
 .show {
     opacity: 1;
     filter: blur(0);
@@ -1308,28 +1243,26 @@ html[dir="rtl"] body {
 /*             Image Lightbox Styles      */
 /* ====================================== */
 
-/* 1. الخلفية الداكنة الكاملة */
 .image-modal {
-    display: none; /* إخفاء في البداية */
+    display: none; 
     position: fixed;
-    z-index: 2000; /* أعلى من كل شيء */
+    z-index: 2000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* خلفية سوداء شفافة */
+    background-color: rgba(0, 0, 0, 0.9); 
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5px); /* تأثير ضبابي خفيف */
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
 
 .image-modal.active {
-    display: flex; /* إظهار عند التفعيل */
+    display: flex;
 }
 
-/* 2. حاوية الصورة داخل المعرض */
 .modal-content-wrapper {
     position: relative;
     max-width: 90%;
@@ -1337,10 +1270,9 @@ html[dir="rtl"] body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: zoom-in 0.3s ease-out; /* حركة فتح سريعة */
+    animation: zoom-in 0.3s ease-out; 
 }
 
-/* 3. الصورة نفسها */
 .modal-content {
     display: block;
     width: auto;
@@ -1348,13 +1280,12 @@ html[dir="rtl"] body {
     max-height: 100vh;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    object-fit: contain; /* لضمان ظهور الصورة بالكامل دون قص */
+    object-fit: contain; 
 }
 
-/* 4. زر الإغلاق (X) */
 .close-modal {
     position: absolute;
-    top: -30px; /* تظهر أعلى الحاوية */
+    top: -30px; 
     right: -30px;
     color: #f1f1f1;
     font-size: 35px;
@@ -1377,7 +1308,6 @@ html[dir="rtl"] body {
     cursor: pointer;
 }
 
-/* حركة الفتح */
 @keyframes zoom-in {
     from { transform: scale(0.5); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
@@ -1393,7 +1323,7 @@ html[dir="rtl"] body {
 /* ====================================== */
 .service-gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 4 أعمدة على الأقل */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 15px;
     margin-top: 30px;
 }
@@ -1418,7 +1348,6 @@ html[dir="rtl"] body {
     display: block;
 }
 
-/* تعديلات على الـ Main Content لتشابه تنسيق الموقع الجديد */
 .main-service-content {
     padding: 20px 0;
     margin-bottom: 40px;
@@ -1430,25 +1359,23 @@ html[dir="rtl"] body {
     text-align: center;
 }
 
-/* Nav Links - التعديل هنا لتقليل حجم الروابط */
 .header-nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 2px; /* تقليل المسافة بين العناصر */
+    gap: 2px;
 }
 
 .header-nav ul li a {
     color: var(--text-light);
     text-decoration: none;
-    padding: 6px 8px; /* تقليل الـ Padding الأفقي والعمودي */
+    padding: 6px 8px; 
     font-weight: 600;
-    font-size: 0.95em; /* تصغير حجم الخط قليلاً */
+    font-size: 0.95em; 
     border-radius: 6px;
     transition: 0.3s;
     white-space: nowrap; 
 
 }
 
-/* ... (باقي كود style.css) ... */
